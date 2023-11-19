@@ -42,6 +42,7 @@ CREATE TABLE Reservations (
 INSERT INTO Équipements (Nom) VALUES ('Chaises');
 INSERT INTO Équipements (Nom) VALUES ('Tables');
 INSERT INTO Équipements (Nom) VALUES ('Les Ordinateurs');
+INSERT INTO Équipements (Nom) VALUES ('Tables');
 
 INSERT INTO Salles (Nom, Capacité, equipements_Id) VALUES ('Salle 1', '23', 1);
 INSERT INTO Salles (Nom, Capacité, equipements_Id) VALUES ('Salle 2', '23', 2);
@@ -61,7 +62,7 @@ INSERT INTO Employés (Nom, Email, Département_Id) VALUES ('Adnane Roujane ', '
 INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin) VALUES (1, 1, '2023-11-16', '2023-11-17');
 INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin) VALUES (2, 2, '2023-11-17', '2023-11-18');
 INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin) VALUES (3, 3, '2023-11-18', '2023-11-19');
-INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin) VALUES (3, 3, '2023-11-19', '2023-11-20');
+INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin) VALUES (4, 4, '2023-11-19', '2023-11-20');
 
 --List (SELECT)
 
@@ -87,4 +88,4 @@ SELECT Reservations.*, Salles.Nom AS Nom_Salle, Employes.Nom AS Nom_Employe
 FROM Reservations
 JOIN Employes ON Reservations.Employé_Id = Employes.Id
 JOIN Salles ON Reservations.Salle_Id = Salles.Id
-WHERE Salles.Nom = 'Salle 1';
+WHERE Salles.Nom = 'Salle 3';
