@@ -77,15 +77,30 @@ JOIN Employés ON Réservations.Employé_Id = Employés.Id
 JOIN Salles ON Réservations.Salle_Id = Salles.Id
 WHERE Employés.Nom = 'Nabil Chabab';
 
-SELECT Reservations.*, Salles.Nom AS Nom_Salle, Employes.Nom AS Nom_Employe
-FROM Reservations
-JOIN Employes ON Reservations.Employé_Id = Employes.Id
-JOIN Salles ON Reservations.Salle_Id = Salles.Id
-JOIN Departement ON Employes.Département_Id = Departement.Id
+SELECT Réservations.*, Salles.Nom AS Nom_Salle, Employés.Nom AS Nom_Employe
+FROM Réservations
+JOIN Employés ON Réservations.Employé_Id = Employés.Id
+JOIN Salles ON Réservations.Salle_Id = Salles.Id
+JOIN Departement ON Employés.Département_Id = Departement.Id
 WHERE Departement.Poste = 'DEV MOBILE';
 
-SELECT Reservations.*, Salles.Nom AS Nom_Salle, Employes.Nom AS Nom_Employe
-FROM Reservations
-JOIN Employes ON Reservations.Employé_Id = Employes.Id
-JOIN Salles ON Reservations.Salle_Id = Salles.Id
+SELECT Réservations.*, Salles.Nom AS Nom_Salle, Employes.Nom AS Nom_Employe
+FROM Réservations
+JOIN Employes ON Réservations.Employé_Id = Employes.Id
+JOIN Salles ON Réservations.Salle_Id = Salles.Id
 WHERE Salles.Nom = 'Salle 3';
+
+SELECT Employés.*, Réservations.*, Salles.Nom AS Nom_Salle
+FROM Employés
+INNER JOIN Réservations ON Employés.Id = Réservations.Employé_Id
+INNER JOIN Salles ON Réservations.Salle_Id = Salles.Id;
+
+SELECT Salles.*, Réservations.*, Employés.Nom AS Nom_Employe
+FROM Salles
+RIGHT JOIN Réservations ON Salles.Id = Réservations.Salle_Id
+LEFT JOIN Employés ON Réservations.Employé_Id = Employés.Id;
+
+SELECT Employés.*, Réservations.*, Salles.Nom AS Nom_Salle
+FROM Employés
+LEFT JOIN Réservations ON Employés.Id = Réservations.Employé_Id
+LEFT JOIN Salles ON Réservations.Salle_Id = Salles.Id;
