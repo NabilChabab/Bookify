@@ -39,30 +39,36 @@ CREATE TABLE Reservations (
 
 -- INSERTION
 
-INSERT INTO Équipements (Nom) VALUES ('Chaises');
-INSERT INTO Équipements (Nom) VALUES ('Tables');
-INSERT INTO Équipements (Nom) VALUES ('Les Ordinateurs');
-INSERT INTO Équipements (Nom) VALUES ('Tables');
+INSERT INTO Équipements (Nom)
+VALUES
+('Chaises'),
+('Tables'),
+('Les Ordinateurs'),
+('Tables');
 
-INSERT INTO Salles (Nom, Capacité, equipements_Id) VALUES ('Salle 1', '23', 1);
-INSERT INTO Salles (Nom, Capacité, equipements_Id) VALUES ('Salle 2', '23', 2);
-INSERT INTO Salles (Nom, Capacité, equipements_Id) VALUES ('Salle 3', '25', 3);
-INSERT INTO Salles (Nom, Capacité, equipements_Id) VALUES ('Salle 4', '25', 4);
+INSERT INTO Salles (Nom, Capacité, equipements_Id)
+VALUES
+('Salle 1', '23', 1),
+('Salle 2', '23', 2),
+('Salle 3', '25', 3),
+('Salle 4', '25', 4);
 
-INSERT INTO Departement (Poste) VALUES ('DEV MOBILE');
-INSERT INTO Departement (Poste) VALUES ('DEV WEB');
-INSERT INTO Departement (Poste) VALUES ('DEVOPS');
-INSERT INTO Departement (Poste) VALUES ('BIG DATA');
+INSERT INTO Departement (Poste) 
+VALUES ('DEV MOBILE'),('DEV WEB'),('DEVOPS'),('BIG DATA');
 
-INSERT INTO Employés (Nom, Email, Département_Id) VALUES ('Said Aabilla', 'said.aabilla@gmail.com', 1);
-INSERT INTO Employés (Nom, Email, Département_Id) VALUES ('Nabil Chabab', 'nabil.chababnabil@gmail.com', 2);
-INSERT INTO Employés (Nom, Email, Département_Id) VALUES ('Zakaria Elkoh ', 'zakaria.elkoh@gmail.com', 3);
-INSERT INTO Employés (Nom, Email, Département_Id) VALUES ('Adnane Roujane ', 'adnane.roujane@gmail.com', 4);
+INSERT INTO Employés (Nom, Email, Département_Id)
+VALUES 
+('Said Aabilla', 'said.aabilla@gmail.com', 1),
+('Nabil Chabab', 'nabil.chababnabil@gmail.com', 2),
+('Zakaria Elkoh ', 'zakaria.elkoh@gmail.com', 3),
+('Adnane Roujane ', 'adnane.roujane@gmail.com', 4);
 
-INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin) VALUES (1, 1, '2023-11-16', '2023-11-17');
-INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin) VALUES (2, 2, '2023-11-17', '2023-11-18');
-INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin) VALUES (3, 3, '2023-11-18', '2023-11-19');
-INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin) VALUES (4, 4, '2023-11-19', '2023-11-20');
+INSERT INTO Réservations (Salle_Id, Employé_Id, Date_Debut, Date_Fin)
+VALUES
+(1, 1, '2023-11-16', '2023-11-17'),
+(2, 2, '2023-11-17', '2023-11-18'),
+(3, 3, '2023-11-18', '2023-11-19');
+(4, 4, '2023-11-19', '2023-11-20');
 
 --List (SELECT)
 
