@@ -54,4 +54,6 @@ Ce projet vise à fournir un système de gestion des réservations de salles pou
 ## Auteur
 
 [Nabil CHABAB]
+## Trello
+https://trello.com/b/b9jGq3eR/brief5-squad2
 
